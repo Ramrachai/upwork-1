@@ -14,14 +14,13 @@ tween1
   .to(".text-4", 4, { opacity: 1 });
 
 var controller = new ScrollMagic.Controller();
-var scale1 = new ScrollMagic.Scene({
+var scene1 = new ScrollMagic.Scene({
   triggerElement: ".view-1",
   offset: 100,
   triggerHook: 0,
   duration: "350%"
 })
   .setTween(tween1)
-  .addIndicators()
   .setPin(".view-1")
   .addTo(controller);
 
@@ -38,23 +37,11 @@ tween2
   .to(".img-3", 2, { opacity: 1 });
 
 var controller = new ScrollMagic.Controller();
-var scale2 = new ScrollMagic.Scene({
+var scene2 = new ScrollMagic.Scene({
   triggerElement: ".view-1",
   offset: 1700,
   triggerHook: 0,
   duration: "100%"
 })
   .setTween(tween2)
-  .addIndicators()
   .addTo(controller);
-
-//dot navigation
-
-// new fullpage("#fullpage", {
-//   //options here
-//   autoScrolling: true,
-//   scrollHorizontally: true
-// });
-
-// //methods
-// fullpage_api.setAllowScrolling(false);
